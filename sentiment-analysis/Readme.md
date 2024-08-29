@@ -9,7 +9,7 @@
 ## Run main.py
 
 ```
-python3 main.py
+python3 train_model.py
 
 ```
 

@@ -10,6 +10,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import string
+import joblib
 
 # Download necessary NLTK data
 nltk.download('punkt')
@@ -67,4 +68,8 @@ print('Confusion Matrix:')
 print(confusion_matrix(y_test, y_pred))
 print('Classification Report:')
 print(classification_report(y_test, y_pred))
+
+# Save the model
+joblib.dump(model, 'movie_sentiment_model.pkl')
+joblib.dump(tfidf, 'tfidf_vectorizer.pkl')
 
